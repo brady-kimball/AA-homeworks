@@ -71,7 +71,42 @@
         </li>
       </ol>
     </section>
-<!-- Original Recipe by Janet Caldwell at http://allrecipes.com/recipe/16354/easy-meatloaf/ -->
+    <section>
+      <form action="/reviews" method = "POST">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="review[name]">
+
+        <br>
+
+        <label for="rating">Rating</label>
+        1<input type="radio" name="rating" value="1" checked>
+        2<input type="radio" name="rating" value="2">
+        3<input type="radio" name="rating" value="3">
+        4<input type="radio" name="rating" value="4">
+        5<input type="radio" name="rating" value="5">
+
+        <br>
+
+        <label for="Cooking Expertise">Cooking Expertise</label>
+        <select id="Cooking Expertise" name = "review[expertise]">
+          <option disabled selected>--Select Cooking Expertise--</option>
+          <option value="Sometimes Cook">Sometimes Cook</option>
+          <option value="Cook Everyday">Cook Everyday</option>
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
+
+        <br>
+
+        <label for="Review">Review</label>
+        <textarea name="review[review]"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit Review">
+      </form>
+
+    </section>
     <footer>
       <p> Original Recipe by <a href="http://allrecipes.com/recipe/16354/easy-meatloaf/">Janet Caldwell</a> </p>
     </footer>
