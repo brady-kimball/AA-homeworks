@@ -2,7 +2,22 @@
 <html>
   <head>
     <title>Brady Kimball Recipe</title>
+    <meta name = "description" content = "The easy, simple, quick recipe
+    for creating the best meatloaf for any holiday, event, or occasion.">
+    <meta charset="utf-8">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-12345678-9', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="external_javascript_example.js" type= "text/javascript"></script>
+    <link rel="stylesheet" href="css_reset.css" type="text/css">
   </head>
+
   <body>
     <header>
       <img src="https://avatars2.githubusercontent.com/u/2138704?v=3&s=200" />
@@ -71,41 +86,42 @@
         </li>
       </ol>
     </section>
-    <section>
-      <form action="/reviews" method = "POST">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="review[name]">
 
-        <br>
+    <section id="reviews">
+      <h2>Reviews</h2>
+        <form id="review-form" action="/reviews" method = "POST">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="review[name]">
 
-        <label for="rating">Rating</label>
-        1<input type="radio" name="rating" value="1" checked>
-        2<input type="radio" name="rating" value="2">
-        3<input type="radio" name="rating" value="3">
-        4<input type="radio" name="rating" value="4">
-        5<input type="radio" name="rating" value="5">
+          <br>
 
-        <br>
+          <label for="rating">Rating</label>
+          1<input type="radio" name="rating" value="1" checked>
+          2<input type="radio" name="rating" value="2">
+          3<input type="radio" name="rating" value="3">
+          4<input type="radio" name="rating" value="4">
+          5<input type="radio" name="rating" value="5">
 
-        <label for="Cooking Expertise">Cooking Expertise</label>
-        <select id="Cooking Expertise" name = "review[expertise]">
-          <option disabled selected>--Select Cooking Expertise--</option>
-          <option value="Sometimes Cook">Sometimes Cook</option>
-          <option value="Cook Everyday">Cook Everyday</option>
-          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
-          <option value="Professional Chef">Professional Chef</option>
-        </select>
+          <br>
 
-        <br>
+          <label for="expertise">Cooking Expertise</label>
+          <select id="expertise" name = "review[expertise]">
+            <option disabled selected>--Select Cooking Expertise--</option>
+            <option value="Sometimes Cook">Sometimes Cook</option>
+            <option value="Cook Everyday">Cook Everyday</option>
+            <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+            <option value="Professional Chef">Professional Chef</option>
+          </select>
 
-        <label for="Review">Review</label>
-        <textarea name="review[review]"></textarea>
+          <br>
 
-        <br><br>
+          <label>Review
+            <textarea id="review" name="review[review]"></textarea>
+          </label>
+          <br><br>
 
-        <input type="submit" value="Submit Review">
-      </form>
-
+          <input type="submit" value="Submit Review">
+        </form>
     </section>
     <footer>
       <p> Original Recipe by <a href="http://allrecipes.com/recipe/16354/easy-meatloaf/">Janet Caldwell</a> </p>
