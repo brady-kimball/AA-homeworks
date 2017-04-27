@@ -41,3 +41,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.user_review {
+  font-style: italic;
+}
+
+.user_review h4 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+}
